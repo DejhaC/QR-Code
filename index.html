@@ -11,23 +11,83 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.qr-container {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 10px 0px; /* Padding for top and sides, no bottom */
+  border-radius: 8px; /* Optional: rounded corners */
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
+}
+
+.qr-code {
+  display: block;
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 0; /* Ensure no space between QR code and bottom border */
+}
+
+.qr-bottom-border {
+  background-color: white;
+  padding: 20px 10px; /* Padding for space inside the bottom border */
+  border-top: 5px solid white; /* Optional: line separating QR code and text */
+  border-radius: 0 0 8px 8px; /* Matching border-radius with the container */
+  position: relative;
+}
+
+.qr-text {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px; 
+  color: #000;
+  font-weight: bold;
+}
+.qr-paragraph-title {
+  font-size: 16px; /* Adjust title font size */
+  color: #000;
+  margin: 0;
+  font-weight: bold;
+}
+.qr-paragraph-body {
+  font-size: 14px; /* Adjust body text font size */
+  color: #555; /* Lighter color for body text */
+  margin: 10px 0 0 0; /* Margin for spacing between title and body */
+}
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, skyblue, white);
+  justify-content: center;
+  align-content: center;
+}
   </style>
 </head>
 <body>
-
-  Improve your front-end skills by building projects!
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Dejha Carlisle</a>.
-  </div>
   <div class="qr-container">
     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/148/100/original/image-qr-code.png?1729474518" alt="QR Code" class="qr-code">
     <div class="qr-bottom-border">
-      <div class="qr-text">Scan me for more info</div>
+      <p class="qr-paragraph-title">Improve your front-end skills by building projects!</p>
+      <p class="qr-paragraph-body">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level.</p>
     </div>
+  </div>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Dejha Carlisle</a>.
   </div>
 </body>
 </html>
